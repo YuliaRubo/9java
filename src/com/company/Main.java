@@ -6,7 +6,7 @@ public class Main {
 
         Person m1 = new Person("Nell", "Teo", new Address("Vitebsk", "Pobeda", 5));
         Person m2 = new Person("Well", "Tig", new Address("Vitebsk", "lazo", 7));
-        Person m3 = new Person("Nell", "Teo", new Address("Vitebsk", "Pobeda", 5));
+        Person m3 = new Person("Dell", "Jip", new Address("Minsk", "Tree", 9);
 	// write your code here
     }
 }

@@ -34,4 +34,7 @@ public class Address {
     public void setNumber(int number) {
         this.number = number;
     }
+    public void getInfo(){
+        return ;
+    }
 }

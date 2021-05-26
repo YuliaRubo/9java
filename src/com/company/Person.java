@@ -3,9 +3,12 @@ package com.company;
 import java.util.Objects;
 
 public class Person {
-    private String firstname;
-    private String lastname;
-    private Address address;
+
+    public  String firstname;
+    public  String lastname;
+    public   Address address;
+
+
 
     public Person(String firstname, String lastname, Address address) {
         this.firstname = firstname;
@@ -39,11 +42,11 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", address=" + address +
-                '}';
+        return "Person {" +
+                "firstName = " + firstname +
+                ", LastName = " + lastname +
+                ", address: " + address.getInfo()+
+                '}'+"\n";
     }
 
     @Override

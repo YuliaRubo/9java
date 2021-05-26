@@ -2,8 +2,9 @@ package com.company;
 
 public class NullFieldException extends RuntimeException {
 
-    public NullFieldException() {
-        super("Непроверяемое исключение");
+    public NullFieldException(String message) {
+
+        super(message);
     }
 }
 

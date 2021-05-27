@@ -1,0 +1,4 @@
+[Person {firstName = Mar, LastName = Teo, address: Vitebsk Pobeda 5}
+, Person {firstName = Well, LastName = Tig, address: Vitebsk lazo 7}
+, Person {firstName = Dell, LastName = Jip, address: Minsk Tree 9}
+]

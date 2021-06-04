@@ -48,13 +48,14 @@ public class Main {
         System.out.println( persons.toString());
 
 
-        PersonIOUtil.writePersons( "infoCollection.txt", persons);
+        PersonIOUtil.writePersons( "infoCollection4.txt", persons);
+
         try {
-            PersonIOUtil.readPersons("infoCollection.txt");
+            PersonIOUtil.readPersons("infoCollection4.txt");
         } catch (EmptySourceFileException e) {
             e.printStackTrace();
         }
-        System.out.println(persons.toString());
+
 
 
     }

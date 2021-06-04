@@ -11,28 +11,15 @@ public class PersonIOUtil {
         //Определяем файл
         File file = new File(fileName);
 
-        try {
-            //проверяем, что если файл не существует то создаем его
-            if(!file.exists()){
-                file.createNewFile();
-            }
+        try (PrintWriter out = new PrintWriter(file.getAbsoluteFile());) {
+            out.print(persons);
 
-            //PrintWriter обеспечит возможности записи в файл
-            PrintWriter out = new PrintWriter(file.getAbsoluteFile());
-
-            try {
-                //Записываем текст в файл
-                out.print(persons);
-            } finally {
-                //После чего мы должны закрыть файл
-                //Иначе файл не запишется
-                out.close();
-            }
-        } catch(IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
     }
+
     public static String readPersons(String fileName) throws EmptySourceFileException {
 
         File file = new File(fileName);
@@ -40,27 +27,24 @@ public class PersonIOUtil {
 
         StringBuilder sb = new StringBuilder();
 
-        try {
+        try (BufferedReader in = new BufferedReader(new FileReader(file.getAbsoluteFile()));) {
             //Объект для чтения файла в буфер
-            BufferedReader in = new BufferedReader(new FileReader( file.getAbsoluteFile()));
-            try {
-
-                String s;
-                while ((s = in.readLine()) != null) {
-                    sb.append(s);
-                    sb.append("\n");
-                }
-            } finally {
-
-                in.close();
+            String s;
+            while ((s = in.readLine()) != null) {
+                sb.append(s);
+                sb.append("\n");
             }
-        } catch(IOException e) {
-            throw new RuntimeException(e);
+            System.out.println(sb.toString());
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+
+
         }
         return fileName;
     }
-
 }
+
+
 
 
 

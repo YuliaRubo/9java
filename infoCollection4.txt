@@ -1,4 +1,3 @@
-[Person {firstName = Mar, LastName = Teo, address: Vitebsk Pobeda 5}
-, Person {firstName = Well, LastName = Tig, address: Vitebsk lazo 7}
-, Person {firstName = Dell, LastName = Jip, address: Minsk Tree 9}
-]
+Mar; Teo; Vitebsk Pobeda 5
+Well; Tig; Vitebsk lazo 7
+Dell; Jip; Minsk Tree 9

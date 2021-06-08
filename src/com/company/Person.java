@@ -42,12 +42,13 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person {" +
-                "firstName = " + firstname +
-                ", LastName = " + lastname +
-                ", address: " + address.getInfo()+
-                '}'+"\n";
-    }
+//        return "Person {" +
+//                "firstName = " + firstname +
+//                ", LastName = " + lastname +
+//                ", address: " + address.getInfo()+
+//                '}'+"\n";
+        return "" + firstname + "; " + lastname + "; " + address.getInfo()+"\n";
+  }
 
     @Override
     public boolean equals(Object o) {

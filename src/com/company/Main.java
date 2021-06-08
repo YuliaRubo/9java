@@ -45,7 +45,10 @@ public class Main {
         persons.add(m1);
         persons.add(m2);
         persons.add(m3);
-        System.out.println( persons.toString());
+        for(Person person : persons){
+            System.out.print(person.toString());
+        }
+
 
 
         PersonIOUtil.writePersons( "infoCollection4.txt", persons);
